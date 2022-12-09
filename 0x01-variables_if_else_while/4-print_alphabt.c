@@ -2,7 +2,7 @@
 #include <unistd.h>
 /**
  * main - Entry point
- * Description: prints alphabet in lowercase then uppercase
+ * Description: prints lowercase alphabets
  * Return: Always 0 (success)
  */
 int main(void)
@@ -11,11 +11,13 @@ int main(void)
 
 	for (ch = 'a'; ch <= 'z'; ch++)
 	{
-		putchar(ch);
-	}
-	for (ch = 'A'; ch <= 'Z'; ch++)
+		if (ch != 'e' && ch != 'q')
 	{
 		putchar(ch);
+	}
+		else
+		{
+		}
 	}
 	putchar('\n');
 	return (0);
