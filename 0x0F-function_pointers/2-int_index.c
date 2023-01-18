@@ -5,24 +5,20 @@
  * @size: The size of the array.
  * @cmp: A pointer to the function to be used to compare values.
  *
- * Return
+ * Return : If no element matches or size <= 0 - -1.
  */
+
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	int i = 0;
+	int index;
 
-	if (size > 0)
+	if (array == NULL || cmp == NULL)
+		return (-1);
+
+	for (index = 0; index < size; index++)
 	{
-		if (array != NULL && cmp != NULL)
-		{
-			while (i < size)
-			{
-				if (cmp(array[i]))
-					return (i);
-
-				i++;
-			}
-		}
+		if (cmp(array[index]) != 0)
+			return (index);
 	}
 
 	return (-1);
