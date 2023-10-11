@@ -1,17 +1,15 @@
 #include "search_algos.h"
 
 /**
- * recursive_search - Searches for a value in a sorted array of integers
- * using the Binary Search algorithm.
+ * recursive_search - searches for a value in an array of
+ * integers using the Binary search algorithm
  *
- * @array: Pointer to the input sorted array.
- * @size: The size of the array.
- * @value: The value to search for.
  *
- * Return: If the value is found, returns the index of its occurrence in the array.
- * If not found, returns -1.
+ * @array: input array
+ * @size: size of the array
+ * @value: value to search in
+ * Return: index of the number
  */
-
 int recursive_search(int *array, size_t size, int value)
 {
 	size_t half = size / 2;
